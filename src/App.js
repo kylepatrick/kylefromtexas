@@ -1,4 +1,4 @@
-import logo from './Logo.svg';
+import logo from './logo.svg';
 import tiktoklogo from "./TikTok_logo.svg.png";
 import React from 'react';
 import './App.css';
