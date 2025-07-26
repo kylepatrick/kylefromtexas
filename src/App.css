@@ -2,35 +2,53 @@
   text-align: center;
   padding: 1rem;
   box-sizing: border-box;
+      background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
 }
 
 .App-logo {
-  height: 40vmin;
-  max-width: 100%;
-  pointer-events: none;
+  height: 200px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
- 
-  }
+.Tok-logo {
+  height: 50px !important;
+}
+
+.Shirt {
+  height: 200px !important;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+  background-color: #282c34;
   color: white;
-  gap: 2rem;
+      background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+
 }
 
 img {
   max-width: 100%;
   height: auto;
+      background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+
+}
+
+table {
+      background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+
+  margin: auto;
 }
 
 .App-link {
