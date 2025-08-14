@@ -1,71 +1,115 @@
-.App {
-  text-align: center;
-  padding: 1rem;
-  box-sizing: border-box;
-      background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
-
-}
-
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
-}
-
-.App-logo {
-  height: 200px !important;
-}
-
-.Tok-logo {
-  height: 50px !important;
-}
-
-.Shirt {
-  height: 200px !important;
-}
-
+/* Make the header fill the viewport and center content */
 .App-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  padding: 10px;
-  background-color: #282c34;
-  color: white;
-      background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
-
+  display: grid;
+  place-items: center;
+  padding: 4vmin 4vmin 8vmin;
+  box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
+/* Keep content from growing too wide on desktops */
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* TikTok logo scales with viewport; never fixed pixels */
+.tok-link { display: inline-block; margin: 2vmin 0; }
+.tok-logo {
+  width: clamp(120px, 18vw, 220px);
   height: auto;
-      background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
-
 }
 
-table {
-      background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
-
-  margin: auto;
+/* Section title scales with device size */
+.section-title {
+  font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+  margin: 4vmin 0 2vmin;
 }
 
-.App-link {
-  color: #61dafb;
+/* General fluid images/buttons */
+img { max-width: 100%; height: auto; }
+button, a { font-size: clamp(0.95rem, 1.6vw, 1.05rem); }
+
+/* Optional dark background for contrast */
+/*
+body { background: #0f0f0f; color: #eaeaea; }
+*/
+
+/* Rotator */
+.promo-rotator {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.promo-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-@media (max-width: 768px) {
-  .App-header {
-    padding: 1rem;
-  }
+.promo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
 }
+
+/* Smooth fade when the src swaps */
+.promo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  background: rgba(255,255,255,0.03);
+  transition: opacity 500ms ease;
+}
+
+.promo-caption {
+  padding: 0.75rem 1rem 1rem;
+  text-align: center;
+}
+
+.promo-caption h3 {
+  margin: 0;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  color: inherit;
+}
+
+.promo-controls {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.promo-controls button {
+  border: 1px solid rgba(255,255,255,0.2);
+  background: transparent;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.promo-controls button:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.promo-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.promo-dots button {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(255,255,255,0.3);
+  padding: 0;
+}
+
+.promo-dots button.active { background: rgba(255,255,255,0.9); }
