@@ -3,6 +3,7 @@ import tiktoklogo from "./TikTok_logo.svg.png";
 import React from 'react';
 import './App.css';
 import EmailLink from './EmailLink';
+import DiscordLink from './DiscordLink';
 import AppLogo from './AppLogo';
 
 function App() {
@@ -18,9 +19,12 @@ function App() {
         </a>
  </td></tr>
 
+ 
  <tr><td colSpan="2">
-        <EmailLink />
+        <DiscordLink />
 </td></tr>
+
+
 <tr><td><br></br>   </td></tr>
        <tr><td align="center" colSpan="2">
         Official T-Shirts<br />
