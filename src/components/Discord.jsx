@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 
-function DiscordLink() {
-  const [hover, setHover] = useState(false);
-
+export default function Discord() {  const [hover, setHover] = useState(false);
   return (
+    <div className="panel">
+      <h1 className="panel-title">Discord</h1>
+      {/* Replace this with your real Discord widget/invite embed if you have one */}
+      <p className="muted">
     <a
       href="https://discord.gg/byfQbwJyqC"
-      target="_blank"
+          target="_blank"
       rel="noopener noreferrer"
       style={{
         padding: '10px 20px',
@@ -28,7 +30,17 @@ function DiscordLink() {
     >
      Join Me On Discord
     </a>
+      </p>
+      <div className="embed-wrap">
+        {/* Example placeholder tile */}
+        <div className="discord-card">
+          <div className="discord-dot" />
+          <div>
+            <div className="discord-title">Kyle’s Discord</div>
+            <div className="discord-subtitle">Join the community →</div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
-
-export default DiscordLink;
